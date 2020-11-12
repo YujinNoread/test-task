@@ -1,0 +1,152 @@
+.form {
+	width: 600px;
+	margin: 0 auto;
+}
+input {
+	font-size: 13pt;
+	border-color: transparent;
+	border-radius: 10px;
+	text-align: center;
+	transition: all .5s ease 0s;
+	border: 1px solid #ddd;
+	position: relative;
+	&:active {
+		outline: transparent;
+		border-radius: 10px;
+		border-color: rgba(70, 169, 232, 0.9);
+	}
+	&:focus {
+		outline: transparent;
+		border-radius: 10px;
+		border-color: rgba(70, 169, 232, 0.9);
+	}
+}
+.invalid {
+	border-color: red;
+	&:active {
+		border-color: red;
+	}
+	&:focus {
+		border-color: red;
+	}
+}
+.form__row {
+	display: flex;
+}
+.form__front {
+	flex: 0 0 340px;
+	padding: 20px;
+	background-color: rgba(200, 200, 200, 0.5);
+	border-radius: 10px;
+	box-shadow: 5px 0 5px rgba(0,0,0,0.5);
+}
+.form__card-number {
+	.form__subtitle {
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 20px;
+	}
+	input {
+		font-weight: bold;
+		margin-top: 10px;
+		width: 100%;
+		height: 40px;
+	}
+}
+.form__title {
+	font-size: 11px;
+	font-weight: bold;
+	margin-top: 13px;
+}
+.form__card-validity {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	.form__subtitle {
+		font-size: 13px;
+		font-weight: bold;
+		text-align: center;
+	}
+	input {
+		width: 48px;
+		height: 34px;
+	}
+}
+.form__month {
+	position: relative;
+	margin-left: 20px;
+	&::before {
+		content: 'MM';
+		position: absolute;
+		top: -15px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 14px;
+	}
+}
+.form__year {
+	position: relative;
+	margin-left: 20px;
+	&::before {
+		content: 'ГГГГ';
+		position: absolute;
+		top: -15px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 14px;
+	}
+}
+.form__back {
+	flex: 0 0 120px;
+	background-color: rgba(200, 200, 200, 0.5);
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.form__card-cvv2 {
+	.form__subtitle {
+		font-size: 14px;
+		width: 100%;
+		margin: 10px auto 0 auto;
+		text-align: center;
+	}
+	input {
+		width: 48px;
+		height: 40px;
+		margin: 0 30px 0 30px;
+	}
+}
+.form__line {
+	margin-top: 20px;
+	height: 46px;
+	background-color: #7f7f7f;
+}
+.form__button {
+	display: flex;
+	justify-content: flex-end;
+	button {
+		background: #fe0605;
+		border: none;
+		outline: none;
+		color: white;
+		padding: 6px 12px;
+		font-size: 16px;
+		border-radius: 4px;
+		display: block;
+		width: 170px;
+		margin-top: 30px;
+		transition: all .3s linear;
+		cursor: pointer;
+		&:hover {
+			background-color: #8f0c0c;
+		}
+		&:disabled {
+			background-color: grey;
+			cursor: default;
+		}
+	}
+}
+.form__message {
+	font-size: 35px;
+	font-style: italic;
+	text-align: center;
+}
